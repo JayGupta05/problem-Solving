@@ -33,7 +33,7 @@ export default class CustomSideBar extends Component{
                   <TouchableOpacity style={styles.logOutButton}
                   onPress = {() => {
                       this.props.navigation.navigate('WelcomeScreen')
-                      //firebase.auth().signOut()
+                      firebase.auth().signOut()
                   }}>
                   <Icon
                 name="logout"

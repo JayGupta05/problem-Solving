@@ -28,8 +28,8 @@ import db from '../config'
 
       keyExtractor = (item, index) => index.toString()
       renderItem = ({item,i})=>{
-          console.log(item + "HIHH");
-          return(
+          console.log(item.question + "HIHH");
+          /*return(
               <ListItem
                 key={i}
                 title={item.question}
@@ -49,6 +49,28 @@ import db from '../config'
                   }
                   bottomDivider
               />
+          );*/
+          return(
+            <ListItem bottomDivider>
+              <ListItem.Content>
+                <ListItem.Title>
+                  {item.question}
+                </ListItem.Title>
+                <ListItem.Subtitle>
+                  {item.description}
+                </ListItem.Subtitle>
+                <TouchableOpacity
+                      style={styles.button}
+                      onPress={() => {
+                        this.props.navigation.navigate("ReplyScreen", {
+                          details: item,
+                        });
+                      }}
+                    >
+                      <Text style={{ color: "#ffff" }}>Reply</Text>
+                    </TouchableOpacity>
+              </ListItem.Content>
+            </ListItem>
           );
       }
 
