@@ -69,6 +69,16 @@ import db from '../config'
                     >
                       <Text style={{ color: "#ffff" }}>Reply</Text>
                     </TouchableOpacity>
+                    <TouchableOpacity
+                      style={styles.button}
+                      onPress={()=>{
+                        this.props.navigation.navigate("RepliesScreen",{
+                          details:item,
+                        })
+                      }}
+                    >
+                      <Text style={{ color: "#ffff" }}> View Replies </Text>
+                    </TouchableOpacity>
               </ListItem.Content>
             </ListItem>
           );
