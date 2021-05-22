@@ -18,7 +18,7 @@ export default class RepliesScreen extends React.Component{
     keyExtractor = (item, index) => index.toString()
     renderItem = ({item,i})=>{
         return(
-          <ListItem bottomDivider>
+          <ListItem bottomDivider topDivider>
             <ListItem.Content>
               <ListItem.Title>
               {item.reply}
@@ -50,10 +50,27 @@ export default class RepliesScreen extends React.Component{
         return(
             <View style={styles.view}>
                 <View>
-                    <Text>
+                    <Text
+                      style={{
+                        justifyContent:'center',
+                        fontSize:20,
+                        alignItems:'center',
+                        marginTop:20,
+                        backgroundColor: "#32867d",
+                        height:50,
+                        padding:10,
+                        paddingLeft:80,
+                       }}
+                    >
                         {this.state.question}
                     </Text>
-                    <Text>
+                    <Text
+                      style={{
+                        fontSize:20,
+                        justifyContent:'center',
+                        alignItems:'center'
+                       }}
+                    >
                         {this.state.description}
                     </Text>
                 </View>

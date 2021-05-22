@@ -32,7 +32,18 @@ export default class ReplyScreen extends React.Component{
     render(){
         return(
             <View>
-                <Text>
+                <Text
+                style={{
+                    justifyContent:'center',
+                    fontSize:20,
+                    alignItems:'center',
+                    marginTop:20,
+                    backgroundColor: "#32867d",
+                    height:50,
+                    padding:10,
+                    paddingLeft:100,
+                   }}
+                >
                     Reply Screen
                 </Text>
                 <Text>
@@ -52,6 +63,7 @@ export default class ReplyScreen extends React.Component{
                         this.replyQuestion();
                         Alert.alert("Replied Successfully!!")
                     }}
+                    style={styles.button}
                >
                    <Text>
                        Submit
@@ -73,5 +85,19 @@ const styles = StyleSheet.create({
         paddingBottom: RFValue(10),
         marginLeft: RFValue(20),
         marginBottom: RFValue(14)
+      },
+      button: {
+        width: 100,
+        height: 30,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#32867d",
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 8,
+        },
+        marginLeft:110,
+        marginTop:20,
       },
 })
